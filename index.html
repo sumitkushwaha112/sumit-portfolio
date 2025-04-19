@@ -1,47 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sumit Singh Kushwaha Portfolio</title>
+    <title>Sumit Singh Kushwaha - Data Science Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of Sumit Singh Kushwaha, Data Science Professional">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
 <style>
 /*======================================
+//--//-->   GLOBAL STYLES
+======================================*/
+:root {
+  --primary-color: #ffbd39;
+  --secondary-color: #343a40;
+  --text-color: #6c757d;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #e6a803;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #e6a803;
+  border-color: #e6a803;
+  color: #000;
+}
+
+.btn-outline-white {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--white);
+  color: #000;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.big {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.big-2 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.big-4 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.heading-section h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/*======================================
 //--//-->   ABOUT
 ======================================*/
-
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-mf .about-img {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
+  background-color: #e9ecef;
   margin: .5rem 0 1.2rem 0;
   border-radius: 0;
   height: .7rem;
@@ -49,7 +150,13 @@
 
 .skill-mf .progress .progress-bar {
   height: .7rem;
-  background-color: #ffbd39;
+  background-color: var(--primary-color);
+}
+
+.skill-mf span {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
 
 /* Animation styles */
@@ -57,49 +164,320 @@
   position: relative;
   font-size: 30px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+  display: inline-block;
+  min-height: 40px;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0 }
+  to { width: 100% }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  from { opacity: 1 }
+  to { opacity: 0 }
 }
 
 /* project image zoom effect */
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
+  border-radius: 10px;
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.blog-entry {
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.blog-entry:hover {
+  transform: translateY(-5px);
+}
+
+.blog-entry .text {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-entry .text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/*======================================
+//--//-->   NAVBAR
+======================================*/
+.navbar {
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  background-color: var(--dark-bg) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover:after {
+  width: 100%;
+}
+
+/*======================================
+//--//-->   HERO SECTION
+======================================*/
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/bg_12.jpg) no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+}
+
+.hero .text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero .text h1 span {
+  color: var(--primary-color);
+}
+
+.hero .text h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.hero .text p {
+  margin-bottom: 2rem;
+}
+
+/*======================================
+//--//-->   RESUME SECTION
+======================================*/
+.resume-wrap {
+  background: var(--white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume-wrap:hover {
+  transform: translateY(-5px);
+}
+
+.resume-wrap .date {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.resume-wrap h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.resume-wrap .position {
+  color: var(--text-color);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.resume-wrap ul {
+  padding-left: 1.5rem;
+}
+
+.resume-wrap ul li {
+  margin-bottom: 0.5rem;
+}
+
+/*======================================
+//--//-->   CONTACT SECTION
+======================================*/
+.contact-section .contact-info {
+  text-align: center;
+  padding: 2rem;
+  background: var(--gray);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-info:hover {
+  transform: translateY(-5px);
+}
+
+.contact-section .contact-info .icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section .contact-info .icon span {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.contact-section .contact-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/*======================================
+//--//-->   FOOTER
+======================================*/
+.ftco-footer {
+  background: var(--dark-bg);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+.ftco-footer-social li {
+  list-style: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.ftco-footer-social li a {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ftco-footer-social li a:hover {
+  color: var(--primary-color);
+}
+
+.normal-txt {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+/*======================================
+//--//-->   RESPONSIVE STYLES
+======================================*/
+@media (max-width: 1199.98px) {
+  .big, .big-2 {
+    font-size: 4rem;
+    top: -3rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .hero .text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .big, .big-2 {
+    font-size: 3.5rem;
+    top: -2.5rem;
+  }
+  
+  .navbar-collapse {
+    background: var(--dark-bg);
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    height: auto;
+    padding: 7rem 0;
+    text-align: center;
+  }
+  
+  .hero .text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .text h2 {
+    font-size: 1.2rem;
+  }
+  
+  .big, .big-2 {
+    font-size: 3rem;
+    top: -2rem;
+  }
+  
+  .about-mf .box-shadow-full {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .big, .big-2 {
+    font-size: 2.5rem;
+    top: -1.5rem;
+  }
+  
+  #typing-animation {
+    font-size: 1.5rem;
+    min-height: 30px;
+  }
+  
+  .hero .text .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .hero .text .btn + .btn {
+    margin-left: 0;
+  }
 }
 </style>
 
@@ -125,15 +503,15 @@
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
+		  <div class="home-slider owl-carousel">
+	       <div class="slider-item">
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
 	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_12.jpg);">
 	          	 <div class="overlay"></div>
 	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Sumit Singh Kushwaha</span></h1>
@@ -158,14 +536,14 @@
 						for (let i = 0; i < text.length; i++) {
 							setTimeout(() => {
 							typingAnimationElement.textContent += text[i];
-							}, i * 200);
+							}, i * 100);
 						}
 
 						// Once the animation is complete, reset the text and start over
 						setTimeout(() => {
 							typingAnimationElement.textContent = '';
 							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
+						}, text.length * 100 + 1000);
 						}
 
 						// Start the typing animation loop
@@ -175,8 +553,14 @@
 						<br>
 						<br>
 			            <h2>A Data Science Professional</h2>
-			            <p><a href="https://www.linkedin.com/in/sumit-singh-kushwaha/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/sumitkushwaha2708" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+			            <p>
+							<a href="https://www.linkedin.com/in/sumit-singh12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-4" target="_blank">
+								<i class="fab fa-linkedin"></i> LinkedIn
+							</a> 
+							<a href="https://github.com/sumitkushwaha112" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">
+								<i class="fab fa-github"></i> My works
+							</a>
+						</p>
 		            </div>
 		          </div>
 	        	</div>
@@ -189,7 +573,6 @@
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
@@ -205,7 +588,7 @@
 										<p><span class="title-s">Name: </span> <span>Sumit Singh Kushwaha</span></p>
 										<p><span class="title-s">Job Role: </span> <span>Data Science Professional</span></p>
 										<p><span class="title-s">Education: </span> <span>B.Tech in Computer Science</span></p>
-										<p><span class="title-s">Address: </span> <span>Uttarakhand, India</span></p>
+										<p><span class="title-s">Location: </span> <span>Uttarakhand, India</span></p>
 									  </div>
 									</div>
 								  </div>
@@ -250,18 +633,18 @@
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
 								
-								<h1 class="big">About</h1>
+								<h1 class="big big-2">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>Data science professional with skills in Python, machine learning, and data visualization. Seeking an entry-level role to apply analytical expertise in extracting insights, building predictive models, and supporting data-driven decision-making.</p>
+								<p>A passionate data science professional with expertise in Python, machine learning, and data visualization. I specialize in transforming complex data into actionable insights and building predictive models to solve real-world problems. Currently seeking opportunities to apply my skills in a professional setting.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Machine Learning</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Healthcare, Retail, Ecommerce</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology in Computer Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>Tools:</span> <span>TensorFlow, Keras, PyTorch, Tableau, Power BI</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Data Analysis, Feature Engineering, Model Deployment</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Problem Solving, Learning New Technologies</span></li>
+									<li class="d-flex"><span><i class="fas fa-user-tie"></i> Profile:</span> <span>Data Science &amp; Machine Learning</span></li>
+									<li class="d-flex"><span><i class="fas fa-industry"></i> Domain:</span> <span>Healthcare, Retail, Ecommerce</span></li>
+									<li class="d-flex"><span><i class="fas fa-graduation-cap"></i> Education:</span> <span>Bachelor of Technology in Computer Science</span></li>
+									<li class="d-flex"><span><i class="fas fa-language"></i> Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span><i class="fas fa-tools"></i> Tools:</span> <span>TensorFlow, Keras, PyTorch, Tableau, Power BI</span></li>
+									<li class="d-flex"><span><i class="fas fa-star"></i> Other Skills:</span> <span>Data Analysis, Feature Engineering, Model Deployment</span></li>
+									<li class="d-flex"><span><i class="fas fa-heart"></i> Interest:</span> <span>Problem Solving, Learning New Technologies</span></li>
 								</ul>
 							</div>
 						</div>
@@ -272,7 +655,7 @@
 									<span class="number" data-number="5">0</span> <span>+</span>
 									<span>&nbsp; Projects completed</span>
 								</p>
-								<p><a href="https://www.linkedin.com/in/sumit-singh-kushwaha/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+								<p><a href="https://www.linkedin.com/in/sumit-singh12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-3" target="_blank"><i class="fab fa-linkedin"></i> View LinkedIn Profile</a></p>
 							</div>
 						</div>
 					</div>
@@ -287,7 +670,7 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>Data science professional with skills in Python, machine learning, and data visualization. Seeking an entry-level role to apply analytical expertise.</p>
+            <p>Experienced data science professional with a strong foundation in machine learning, data analysis, and predictive modeling. Skilled in transforming complex data into actionable insights.</p>
           </div>
         </div>
 
@@ -305,9 +688,9 @@
 						<span class="position">Bharat Heavy Electricals Limited (BHEL), Haridwar</span>
 						<p class="mt-4">
 							<ul>
-								<li>Worked on data science concepts and applied machine learning techniques to analyze and process data efficiently.</li>
-								<li>Gained experience in data preprocessing, feature engineering, and model building for real-world applications.</li>
-								<li>Collaborated on projects integrating web development and data science, enhancing both frontend and backend functionalities.</li>
+								<li><i class="fas fa-check-circle"></i> Worked on data science concepts and applied machine learning techniques to analyze and process data efficiently.</li>
+								<li><i class="fas fa-check-circle"></i> Gained experience in data preprocessing, feature engineering, and model building for real-world applications.</li>
+								<li><i class="fas fa-check-circle"></i> Collaborated on projects integrating web development and data science, enhancing both frontend and backend functionalities.</li>
 							</ul>
 						</p>
 					</div>
@@ -329,23 +712,31 @@
     					<span class="date">2022-Present</span>
     					<h2>Bachelor of Technology</h2>
     					<span class="position">COER University, Uttarakhand, India</span>
-    					<p class="mt-4">Computer Science - CGPA: 8.40</p>
+    					<p class="mt-4"><i class="fas fa-graduation-cap"></i> Computer Science - CGPA: 8.40</p>
     				</div>
     			</div>
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022</span>
+    					<h2>Intermediate</h2>
+    					<span class="position">Kendriya Vidyalaya BHEL Haridwar</span>
+    					<p class="mt-4"><i class="fas fa-percentage"></i> Percentage: 77.6%</p>
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
     					<span class="date">2020</span>
     					<h2>Intermediate</h2>
     					<span class="position">Kendriya Vidyalaya BHEL Haridwar</span>
-    					<p class="mt-4">Percentage: 77.6%</p>
+    					<p class="mt-4"><i class="fas fa-percentage"></i> Percentage: 85.6%</p>
     				</div>
 				</div>
     		</div>
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="sumit singh kushwaha ,Resume.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="sumit-singh-kushwaha-resume.pdf" class="btn btn-primary py-4 px-5" download><i class="fas fa-download"></i> Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -357,37 +748,40 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are my Data Science and Machine Learning projects.</p>
+            <p>Explore my data science and machine learning projects that demonstrate my skills and expertise.</p>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              <a href="https://github.com/sumitkushwaha112/Medicine-Recommendation-System" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');" target="_blank">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">Medicine Recommendation System</a></h3>
+                <h3 class="heading"><a href="https://github.com/sumitkushwaha112/Medicine-Recommendation-System" target="_blank">Medicine Recommendation System</a></h3>
                 <p>AI-powered system that suggests personalized medications based on user symptoms with 90% accuracy.</p>
+                <p><a href="https://github.com/sumitkushwaha112/Medicine-Recommendation-System" class="btn btn-primary" target="_blank">View Project</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              <a href="https://github.com/sumitkushwaha112/Skin-Disease-Detection" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');" target="_blank">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">Skin Disease Detection</a></h3>
+                <h3 class="heading"><a href="https://github.com/sumitkushwaha112/Skin-Disease-Detection" target="_blank">Skin Disease Detection</a></h3>
                 <p>Deep learning-based skin disease classification using EfficientNetB0 with 95% accuracy.</p>
+                <p><a href="https://github.com/sumitkushwaha112/Skin-Disease-Detection" class="btn btn-primary" target="_blank">View Project</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              <a href="https://github.com/sumitkushwaha112/Human-Activity-Recognition" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');" target="_blank">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">Human Activity Recognition</a></h3>
+                <h3 class="heading"><a href="https://github.com/sumitkushwaha112/Human-Activity-Recognition" target="_blank">Human Activity Recognition</a></h3>
                 <p>Deep learning model for recognizing human activities from video data using CNN+LSTM architecture.</p>
+                <p><a href="https://github.com/sumitkushwaha112/Human-Activity-Recognition" class="btn btn-primary" target="_blank">View Project</a></p>
               </div>
             </div>
           </div>
@@ -401,7 +795,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="3">0</strong>
+                <strong class="number" data-number="5">0</strong>
                 <span>Certifications</span>
               </div>
             </div>
@@ -426,12 +820,15 @@
       </div>
 	
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>More projects on<span> Github  </span> </h2>
-					<div class="heading"> <h4> I love to solve problems using data science </h4>
-					<br>
-					<p><a href="https://github.com/sumitkushwaha2708" class="btn btn-primary py-3 px-5">GitHub</a></p>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> GitHub </span></h2>
+						<div class="heading">
+							<h4>I love to solve problems using data science</h4>
+							<br>
+							<p><a href="https://github.com/sumitkushwaha112" class="btn btn-primary py-3 px-5" target="_blank"><i class="fab fa-github"></i> Visit My GitHub</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -439,79 +836,79 @@
 	</section>
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Uttarakhand, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel:+919634224419">+91 9634224419</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:sumitkushwaha2708@gmail.com">sumitkushwaha2708@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="sumit singh kushwaha ,Resume.pdf">Download</a></p>
-	          </div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> </h2>
-				</div>
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Contact</h1>
+			  <h2 class="mb-4">Contact Me</h2>
+			  <p>Feel free to reach out for collaborations or just a friendly hello!</p>
 			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sumit-singh-kushwaha/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://github.com/sumitkushwaha2708"><span class="icon-github"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
-
+		  </div>
+	  
+		  <div class="row d-flex contact-info mb-5">
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-map-signs"></span>
+				</div>
+				<h3 class="mb-4">Address</h3>
+				<p>Uttarakhand, India</p>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-phone2"></span>
+				</div>
+				<h3 class="mb-4">Contact Number</h3>
+				<p><a href="tel:+919634224419">+91 9634224419</a></p>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-paper-plane"></span>
+				</div>
+				<h3 class="mb-4">Email Address</h3>
+				<p><a href="mailto:sumitkushwaha2708@gmail.com">sumitkushwaha2708@gmail.com</a></p>
+			  </div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-download"></span>
+				</div>
+				<h3 class="mb-4">Download Resume</h3>
+				<p><a href="sumit-singh-kushwaha-resume.pdf" download>Download Now</a></p>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="container">
+			<div class="row justify-content-center">
+			  <div class="col-md-7 ftco-animate text-center">
+				<h2>Have a<span> Question? </span></h2>
+				<p>Feel free to reach out through any of the channels above or connect with me on social media.</p>
+			  </div>
+			</div>
+			<br>
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+			  <li class="ftco-animate normal-txt">Find me on </li>
+			  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sumit-singh12" target="_blank"><span class="icon-linkedin"></span></a></li>  
+			  <li class="ftco-animate"><a href="https://github.com/sumitkushwaha112" target="_blank"><span class="icon-github"></span></a></li>
+			  <li class="ftco-animate"><a href="mailto:sumitkushwaha2708@gmail.com" target="_blank"><span class="icon-envelope"></span></a></li>
+			</ul>
+			<br>
+		  </div>
+		</div>
+	  </section>
     <footer class="ftco-footer ftco-section">
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12 text-center">
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			  <p>
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			  </p>
 			</div>
 		  </div>
 		</div>
@@ -532,6 +929,32 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
+  
+  <script>
+    // Navbar scroll effect
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+
+    // Counter animation
+    $(document).ready(function() {
+      $('.number').each(function () {
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).data('number')
+        }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+      });
+    });
+  </script>
   
   <script src="js/main.js"></script>
     
